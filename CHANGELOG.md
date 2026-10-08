@@ -1,5 +1,13 @@
 # mppx
 
+## 0.13.4
+
+### Patch Changes
+
+- d27f02d: Fixed `tempo/session` `onSessionSettlement` double-counting a retried settlement after a failed checkpoint; `delta` now comes from the receipt's `deltaPaid`. Exported `SettlementCheckpointError` as `tempo.SettlementCheckpointError` from `mppx/server`.
+- bbbec69: Added a fresh HMAC-bound issuance nonce to server-generated payment challenges while preserving route metadata checks.
+- 99b6e08: Prevented WebSocket payment authorization after cancellation and settled interrupted connection attempts.
+
 ## 0.13.3
 
 ### Patch Changes
